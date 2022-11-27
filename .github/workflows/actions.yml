@@ -3,10 +3,6 @@ name: run main.py
 on:
   schedule:
     - cron: '30 4 * * 1' # At 04:30 on Monday (weekly)
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
