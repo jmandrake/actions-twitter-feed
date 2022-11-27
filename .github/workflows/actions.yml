@@ -3,7 +3,12 @@ name: run main.py
 on:
   schedule:
     - cron: '0 4 * * *' # At 04:00 once a day
-
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+  
 jobs:
   build:
     runs-on: ubuntu-latest
